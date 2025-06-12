@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200..900&display=swap');
+
+/* bg of website */
+body{
+    background-color: purple;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* ribbon bar */
+nav{
+    /* margin-top: 20px; */
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: black;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 100;
+    gap: 2rem;
+    box-sizing: border-box;
+    filter: drop-shadow(0 0 5px #8a00c2); 
+}
+
+nav a{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-size: 1em;
+    position: relative;
+    text-decoration: none;
+    padding:  0.5rem 1.5rem;
+    z-index: 1;
+    transition:  color 0.5s ease;
+     overflow: hidden;
+     border-radius: 50px;
+    filter: drop-shadow(0 0 5px #8a00c2); 
+}
+
+/* select background */
+nav a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #8a00c2, #1B0c32);
+  z-index: -1;
+  /* border-radius: 8px; */
+  transform: translate(100%);
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 6px #8a00c2;
+ 
+}
+
+nav a:hover::before {
+   transform: translateY(0);
+}
+
+nav a:hover {
+  color: white; /* stays visible on colored background */
+}
+
+/* hellfuryInk icon */
+.nav-logo {
+    height: 80%;
+    width: 80px;
+  margin: 0 1rem;
+}
+
+
+/* home page */
+.HomePage_Grid_Container{
+  /* display: flexbox; */
+  position: relative;
+  z-index: 1;
+  padding-top: 10rem;
+  text-align: center;
+  background-color: rgba(148, 141, 141, 0.7); /* grey blokc */
+  padding: 3rem;
+  border-radius: 20px;
+  margin: 5% auto;
+  width: 60%;
+}
+
+.page-section {
+  margin-top: 8rem;
+  padding: 2rem;
+  padding-top: 80px; 
+  text-align: center;
+  display: block;
+  width: auto;
+  height: 20%;
+}
+
+.home-section {
+  position: relative;
+  min-height: 200vh; /*grows with the content*/
+  overflow: hidden;
+  color: white;
+}
+
+.home-section {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 10rem 2rem;
+}
+
+
+.block {
+  background-color: #1B0c32;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: 'Crimson Pro', serif;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.block:hover {
+  background-color: #a400e6;
+  transform: scale(1.05);
+}
+
+/* skils and about me dnd themed sheet */
+.character-sheet {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: white;
+  font-family: 'Crimson Pro', serif;
+  flex-wrap: wrap;
+}
+
+.character-images {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.character-image {
+  width: 120px;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+.character-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.character-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+
+
+
+.game-section {
+  margin-top: 8rem;
+  padding: 2rem;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+
+}
+
+.game-frame {
+  width: 90%;
+  max-width: 800px;
+  height: 800px;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-top: 2rem;
+  align-content: center;
+}
+
+.game-card {
+  background-color: #755f7c;
+   max-width: 800px;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 2px solid white;
+}
+
+h2{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+/* //Animated Navigation Bar in HTML and CSS Menu Hover Animation Effects
+//Jul 30, 2023
+//El_ Shadow Academy
+//19 may 2025
+//https://www.youtube.com/watch?v=EXzotQV4tDM
+//online youtube video --> */
+
+/*https://fonts.google.com/knowledge/using_type/using_web_fonts*/
+
+/* https://www.youtube.com/playlist?list=PL5e68lK9hEzcZLltZrc3NDlKWS3XygchY */
+/* playlist */
