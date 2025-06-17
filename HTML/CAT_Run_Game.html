@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Space Cat Run</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/CAT_Run_Styles.css">
+    <link rel="icon" type="image/png" href="../images/logo_norm (2).jpeg">
+</head>
+<body>
+
+<!--  Main Menu -->
+<div id="mainMenu" class="fullscreen">
+    <h1>Space Cat Run</h1>
+    <button onclick="startGame()">Start Game</button>
+</div>
+
+<!-- Game Container -->
+<div id="gameContainer" style="display: none;">
+    <canvas id="board"></canvas>
+    <div id="scoreDisplay">Score: 0</div>
+</div>
+
+<!-- Pause Menu -->
+<div id="pauseMenu" class="overlay" style="display: none;">
+    <div class="pauseMenuContent">
+        <h2>Game Paused</h2>
+        <button onclick="togglePause()">Resume</button>
+        <button onclick="restartGame()">Restart</button>
+        <button onclick="returnToMainMenu()">Main Menu</button>
+    </div>
+</div>
+
+<!-- Game Over Screen -->
+<div id="gameOverScreen" class="overlay" style="display: none;">
+    <div class="pauseMenuContent">
+        <h2>Game Over!</h2>
+        <p>Your score: <span id="finalScore">0</span></p>
+        <button onclick="restartGame()">Restart</button>
+        <button onclick="returnToMainMenu()">Main Menu</button>
+    </div>
+</div>
+
+  <footer>
+  <p>&copy; 2025 HellFuryInk</p>
+  <div class="social-icons">
+    <a href="https://ko-fi.com/hellfuryink" target="_blank" aria-label="Ko-fi"><i class="fa-solid fa-mug-hot"></i></a>
+    <a href="https://www.instagram.com/_hellfuryink_/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    <a href="mailto:hannah.condon.za@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+  </div>
+</footer>
+
+<script src="../JS/CAT_Run_Script.js"></script>
+</body>
+</html>
+
+<!-- https://www.youtube.com/watch?v=lgck-txzp9o -->
