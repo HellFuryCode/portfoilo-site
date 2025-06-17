@@ -6,11 +6,16 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    height: 100%;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at bottom,purple 0%, #321b35 100%);
+    font-family: 'Zen Dots', sans-serif;
 }
+
+/* --------------------------------------------------------------- */
 
 /* ribbon bar */
 nav{
-    /* margin-top: 20px; */
     position: fixed;
     top:0;
     left:0;
@@ -27,9 +32,9 @@ nav{
 }
 
 nav a{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Zen Dots', sans-serif;
     color: white;
-    font-size: 1em;
+    font-size: 1.2em;
     position: relative;
     text-decoration: none;
     padding:  0.5rem 1.5rem;
@@ -67,20 +72,18 @@ nav a:hover {
 
 /* hellfuryInk icon */
 .nav-logo {
-    height: 80%;
-    width: 80px;
-  margin: 0 1rem;
+    height: 6em;
+    width: 6em;
 }
-
+/* --------------------------------------------------------------- */
 
 /* home page */
 .HomePage_Grid_Container{
-  /* display: flexbox; */
   position: relative;
   z-index: 1;
   padding-top: 10rem;
   text-align: center;
-  background-color: rgba(148, 141, 141, 0.7); /* grey blokc */
+  background-color: rgba(123, 74, 133, 0.7); /* grey blokc */
   padding: 3rem;
   border-radius: 20px;
   margin: 5% auto;
@@ -88,9 +91,11 @@ nav a:hover {
 }
 
 .page-section {
-  margin-top: 8rem;
+  margin-top: 4rem;
   padding: 2rem;
+  min-height: 100vh;
   padding-top: 80px; 
+  padding-bottom: 4rem;
   text-align: center;
   display: block;
   width: auto;
@@ -98,29 +103,122 @@ nav a:hover {
 }
 
 .home-section {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   position: relative;
-  min-height: 200vh; /*grows with the content*/
-  overflow: hidden;
+  min-height: 100vh; 
+  overflow-x: hidden;
   color: white;
-}
-
-.home-section {
   background-size: cover;
   background-position: center;
   color: white;
   padding: 10rem 2rem;
 }
 
+.home-link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+.home-tile {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid #a400e6;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  color: #eee;
+  padding: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%;
+  max-width: 250px;
+}
+
+.home-tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #a400e6;
+}
+
+.home-tile img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.home-tile span {
+  display: block;
+  font-family: 'Zen Dots', sans-serif;
+  font-size: 1.2rem;
+}
+
+.skill-section{
+  
+   background-position: center;
+  padding: 10rem 2rem;
+   overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+.blockloock{
+  padding: 10%;
+  background-color: #1b0c327c;
+  color: white;
+  min-height: 20vh;
+  border-radius: 15%;
+    box-shadow: 0 0 20px #a400e6;
+}
+
+.portfolio-section{
+  background-position: center;
+ padding: 10rem 2rem;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+
+/* --------------------------------------------------------------- */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
 
 .block {
-  background-color: #1B0c32;
+  background-color: rgba(89, 16, 99, 0.671);
+  border: 2px solid #a400e6;
   color: white;
-  padding: 1rem;
-  border-radius: 10px;
   text-decoration: none;
   font-family: 'Crimson Pro', serif;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1.2rem;
   text-align: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  aspect-ratio: 1 / 1; /* Keep blocks square [] */
+  width: 100%;
+  max-width: 300px; /* Don't get too huge on wide screens */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .block:hover {
@@ -128,9 +226,22 @@ nav a:hover {
   transform: scale(1.05);
 }
 
+/* --------------------------------------------------------------- */
+
 /* skils and about me dnd themed sheet */
+
+.about-section{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
+  background-position: center;
+  padding: 10rem 2rem;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
 .character-sheet {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(29, 2, 29, 0.582);
   border: 2px solid white;
   border-radius: 12px;
   padding: 2rem;
@@ -169,12 +280,53 @@ nav a:hover {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: space-between;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
+.character-row2{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 0.95em;
+   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
 
+.skill-column {
+  margin-top: 1.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 300px;
+  font-family: 'Zen Dots', sans-serif;
+}
 
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-list li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #eee;
+  border-bottom: 1px dashed #7a00cc;
+  padding-bottom: 0.2rem;
+}
+
+.dots {
+  font-family: monospace;
+  color: #a600ff;
+}
+
+/* --------------------------------------------------------------- */
 
 .game-section {
+  
   margin-top: 8rem;
   padding: 2rem;
   text-align: center;
@@ -204,18 +356,116 @@ nav a:hover {
   border: 2px solid white;
 }
 
-h2{
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.headingH{
+  color: white;
+  border: 2px solid #a400e6;
+    background-color: rgba(0, 0, 0, 0.226);
+      text-align: center;
 }
 
+.para1{
+  color: white;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+/* --------------------------------------------------------------- */
 footer {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background: black;
+  position: relative;
+  z-index: 2;
   color: white;
   text-align: center;
   padding: 1rem 2rem;
 }
+
+/* .page-section:last-of-type {
+  margin-bottom: 6rem; 
+} */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.project-block {
+  background-color: rgba(0, 0, 0, 0.226);
+  border: 2px solid #a400e6;
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-block:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #a400e6;
+}
+
+.game-description{
+  font-size: 1.8rem;
+  color: white;
+}
+
+/* --------------------------------------------------------------- */
+
+.social-icons a {
+  color: white;
+  margin: 0 1rem;
+  font-size: 1.8rem;
+  transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #a400e6; 
+}
+/* ====================================================================== */
+/* stars hell yeah!!!! */
+
+#stars, #stars2, #stars3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  z-index: -1;
+}
+
+#stars {
+  width: 1px;
+  height: 1px;
+  animation: animStar 50s linear infinite;
+}
+
+#stars2 {
+  width: 2px;
+  height: 2px;
+  animation: animStar 100s linear infinite;
+}
+
+#stars3 {
+  width: 3px;
+  height: 3px;
+  animation: animStar 150s linear infinite;
+}
+
+
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+
 
 /* //Animated Navigation Bar in HTML and CSS Menu Hover Animation Effects
 //Jul 30, 2023
@@ -228,3 +478,4 @@ footer {
 
 /* https://www.youtube.com/playlist?list=PL5e68lK9hEzcZLltZrc3NDlKWS3XygchY */
 /* playlist */
+/* https://codepen.io/sarazond/pen/LYGbwj */
