@@ -63,15 +63,38 @@ nav a::before {
 }
 
 nav a:hover::before {
-   transform: translateY(0);
+  transform: translateY(0);
 }
 
+/* stays visible on colored background */
 nav a:hover {
-  color: white; /* stays visible on colored background */
+  color: white; 
 }
 
-/* hellfuryInk icon */
+/* Hide nav links on smaller screens like phones*/
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+/* hellfuryInk icon, clickeable on mobile*/
 .nav-logo {
+    cursor: pointer;
     height: 6em;
     width: 6em;
 }
@@ -153,6 +176,8 @@ nav a:hover {
   font-size: 1.2rem;
 }
 
+/* --------------------------------------------------------------- */
+
 .skill-section{
   
    background-position: center;
@@ -228,7 +253,7 @@ nav a:hover {
 
 /* --------------------------------------------------------------- */
 
-/* skils and about me dnd themed sheet */
+/* skils and about me dnd themed sheet cause im cool*/
 
 .about-section{
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -314,13 +339,13 @@ nav a:hover {
   margin-bottom: 0.5rem;
   font-size: 1rem;
   color: #eee;
-  border-bottom: 1px dashed #7a00cc;
+  border-bottom: 1px dashed #ffffff;
   padding-bottom: 0.2rem;
 }
 
 .dots {
   font-family: monospace;
-  color: #a600ff;
+  color: #ffffff;
 }
 
 /* --------------------------------------------------------------- */
@@ -355,6 +380,8 @@ nav a:hover {
   transition: background-color 0.3s ease;
   border: 2px solid white;
 }
+
+/* --------------------------------------------------------------- */
 
 .headingH{
   color: white;

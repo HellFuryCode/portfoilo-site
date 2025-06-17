@@ -1,19 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll(".nav-link");
-  const sections = document.querySelectorAll(".page-section");
-  links.forEach(link => {
-    link.addEventListener("click", () => {
-      const target = link.getAttribute("data-target");
-      sections.forEach(section => {
-        section.style.display = section.id === target ? "block" : "none";
-     
-        
-     
-      });
-    });
-  });
 
-    const stars1 = document.getElementById("stars");
+  const stars1 = document.getElementById("stars");
   const stars2 = document.getElementById("stars2");
   const stars3 = document.getElementById("stars3");
 
@@ -30,6 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (stars1) stars1.style.boxShadow = generateShadows(70);
   if (stars2) stars2.style.boxShadow = generateShadows(40);
   if (stars3) stars3.style.boxShadow = generateShadows(20);
-});
+
+  // toggle hamburger icon for mobile so its like collapsiable
+  function toggleMenu() {
+  const navLinks = document.getElementById("navLinks");
+  navLinks.classList.toggle("show");
+}
 
 // https://youtu.be/k4Tyh-MVuxg

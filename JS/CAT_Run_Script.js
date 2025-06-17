@@ -66,6 +66,20 @@ window.onload = function(){
         runFrames.push(img);
     }
 
+    window.onload = function(){
+    board = document.getElementById("board");
+    board.height = boardHeight;
+    board.width = boardWidth;
+    context = board.getContext("2d");
+
+    // Load cat run 
+    for (let i = 1; i <= 8; i++) {
+        let img = new Image();
+        img.src = `../images/${i}.png`;
+        runFrames.push(img);
+    }
+
+
     // Load cat death 
     for (let i = 1; i <= 7; i++) {
         let img = new Image();
@@ -86,6 +100,24 @@ window.onload = function(){
 
     document.addEventListener("keydown", moveCat);
 }
+// mobile rezing stuff
+    function resizeCanvas() {
+        let aspectRatio = boardWidth / boardHeight;
+        let width = window.innerWidth * 0.95;
+        let height = width / aspectRatio;
+
+        if (height > window.innerHeight * 0.6) {
+            height = window.innerHeight * 0.6;
+            width = height * aspectRatio;
+        }
+
+        board.style.width = `${width}px`;
+        board.style.height = `${height}px`;
+    }
+
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+};
 
     //start game
     function startGame() {
