@@ -1,4 +1,3 @@
-
   const stars1 = document.getElementById("stars");
   const stars2 = document.getElementById("stars2");
   const stars3 = document.getElementById("stars3");
